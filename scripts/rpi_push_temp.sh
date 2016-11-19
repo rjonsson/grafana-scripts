@@ -4,9 +4,12 @@ readlink -f "$0"
 scriptdir=$(dirname $0)
 
 #Call python script for temperature sensor reading
-read temp_in temp_out <<< $(/usr/bin/python $scriptdir/python/rpi2_readtemp.py)
+read -r temp_in temp_out <<< $(/usr/bin/python $scriptdir/python/rpi_readtemp.py)
 #/usr/bin/python $scriptdir/python/rpi_readtemp.py
 #sleep 10
+echo $temp_in
+echo $temp_out
+
 
 #Read files that the python script produces
 #temp_in=$(<temp_in.data)

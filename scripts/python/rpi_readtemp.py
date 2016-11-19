@@ -32,7 +32,11 @@ def read_temp(usefile):
 temp_in=read_temp(device1_file)	
 temp_out=read_temp(device2_file)	
 
-f1 = open('temp_in.data','w')
-f2 = open('temp_out.data','w')
-f1.write(str(temp_in))
-f2.write(str(temp_out))
+print(temp_in)
+print(temp_out)
+
+
+#f1 = open('temp_in.data','w')
+#f2 = open('temp_out.data','w')
+#f1.write(str(temp_in))
+#f2.write(str(temp_out))
