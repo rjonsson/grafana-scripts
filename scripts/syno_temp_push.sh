@@ -1,4 +1,5 @@
 #!/bin/bash
+#usage syno_temp_push.sh <ip> <hostname>
 
 syno_ip=$1
 hostname=$2
