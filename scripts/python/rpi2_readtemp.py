@@ -28,7 +28,3 @@ temp_intake=read_temp(device1_file)
 
 
 print(temp_intake)
-
-#f1 = open('temp_intake.data','w')
-#f1.write(str(temp_intake))
-
