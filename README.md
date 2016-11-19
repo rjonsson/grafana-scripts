@@ -1,3 +1,3 @@
 # grafana_home
 
-Repository for my grafana home project
+Repository for my grafana home project.
