@@ -34,9 +34,3 @@ temp_out=read_temp(device2_file)
 
 print(temp_in)
 print(temp_out)
-
-
-#f1 = open('temp_in.data','w')
-#f2 = open('temp_out.data','w')
-#f1.write(str(temp_in))
-#f2.write(str(temp_out))
