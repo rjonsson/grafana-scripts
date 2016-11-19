@@ -26,6 +26,9 @@ def read_temp(usefile):
 
 temp_intake=read_temp(device1_file)
 
-f1 = open('temp_intake.data','w')
-f1.write(str(temp_intake))
+
+print(temp_intake)
+
+#f1 = open('temp_intake.data','w')
+#f1.write(str(temp_intake))
 
