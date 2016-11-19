@@ -1,5 +1,7 @@
 #!/bin/bash
-/usr/bin/python ./python/rpi_readtemp.py
+readlink -f "$0"
+scriptdir=$(dirname $0)
+/usr/bin/python $scriptdir/python/rpi_readtemp.py
 sleep 10
 temp_in=$(<temp_in.data)
 temp_out=$(<temp_out.data)
