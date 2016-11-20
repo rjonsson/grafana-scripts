@@ -13,5 +13,5 @@ case "$1" in
 			curl -i -XPOST 'http://192.168.1.120:8086/write?db=home&precision=s' --data-binary "net,host=$hostname,interface=$ifname,direction=rx value=$inoctets"
 			curl -i -XPOST 'http://192.168.1.120:8086/write?db=home&precision=s' --data-binary "net,host=$hostname,interface=$ifname,direction=tx value=$outoctets"
 			;;
-	*) echo "usage blabla list <ip> or query <ip> <if#>" ;;
+	*) echo "usage list <ip> <if#> or query <ip> <if#>" ;;
 esac
