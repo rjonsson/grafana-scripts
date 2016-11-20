@@ -1,4 +1,9 @@
 #!/bin/bash
+
+#Get scriptdir for external script call
+readlink -f "$0"
+scriptdir=$(dirname $0)
+
 #Call python script for temperature sensor reading and read variables for each line
 read -r temp_inside temp_outside <<< $(/usr/bin/python $scriptdir/python/rpi_readtemp.py)
 
