@@ -11,9 +11,9 @@ read -r sys cpu fan1 fan2 fan3 <<<$(racadm -r 192.168.1.250 -u racuser -p ignore
 #FAN3RPM
 
 #Upload data to to InfluxDB
-curl -i -XPOST 'http://192.168.1.120:8086/write?db=home' --data-binary "temp,host=r220,sensor=sys value=$sys"
-curl -i -XPOST 'http://192.168.1.120:8086/write?db=home' --data-binary "temp,host=r220,sensor=cpu value=$cpu"
-curl -i -XPOST 'http://192.168.1.120:8086/write?db=home' --data-binary "temp,host=r220,sensor=fan1_rpm value=$fan1"
-curl -i -XPOST 'http://192.168.1.120:8086/write?db=home' --data-binary "temp,host=r220,sensor=fan2_rpm value=$fan2"
-curl -i -XPOST 'http://192.168.1.120:8086/write?db=home' --data-binary "temp,host=r220,sensor=fan3_rpm value=$fan3"
+curl -i -XPOST 'http://192.168.1.120:8086/write?db=home&precision=s' --data-binary "temp,host=r220,sensor=sys value=$sys"
+curl -i -XPOST 'http://192.168.1.120:8086/write?db=home&precision=s' --data-binary "temp,host=r220,sensor=cpu value=$cpu"
+curl -i -XPOST 'http://192.168.1.120:8086/write?db=home&precision=s' --data-binary "temp,host=r220,sensor=fan1_rpm value=$fan1"
+curl -i -XPOST 'http://192.168.1.120:8086/write?db=home&precision=s' --data-binary "temp,host=r220,sensor=fan2_rpm value=$fan2"
+curl -i -XPOST 'http://192.168.1.120:8086/write?db=home&precision=s' --data-binary "temp,host=r220,sensor=fan3_rpm value=$fan3"
 
